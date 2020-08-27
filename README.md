@@ -17,9 +17,9 @@ I've created an example python script that runs on the host and writes logs to a
 ## Getting Started
 
 1. `docker-compose up -d`
-2. Navigate to Grafana at http://localhost:3000
+2. Navigate to Grafana at http://localhost:3000, and login with default credentials `admin:admin`
 3. [Add Loki as a data source in Grafana](https://grafana.com/docs/loki/latest/getting-started/grafana/) (URL is http://loki:3100 since you're using docker-compose)
-4. Start the "app": `python ./app.py` (it will start writing logs on the host machine, Ctrl + C to stop it)
+4. Start the "app": `python ./app.py`. It will start writing logs on the host machine to `/tmp/var/log/app.log` (make sure that file is writable); press Ctrl + C to stop it.
 5. Create some dashboards on Grafana!
 
 ## Helpful Resources
